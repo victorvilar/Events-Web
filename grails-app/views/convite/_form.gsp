@@ -34,7 +34,7 @@
 		<g:message code="convite.listausuario.label" default="Listausuario" />
 		
 	</label>
-	<g:select name="listausuario" from="${events.ListaUsuario.list()}" multiple="multiple" optionKey="id" size="5" value="${conviteInstance?.listausuario*.id}" class="many-to-many"/>
+	<g:select name="listausuario" from="${events.Usuario.list()}" multiple="multiple" optionKey="id" size="5" value="${conviteInstance?.listausuario*.id}" class="many-to-many"/>
 
 </div>
 

@@ -56,12 +56,30 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: eventoInstance, field: 'local', 'error')} ">
+	<label for="local">
+		<g:message code="evento.local.label" default="Local" />
+		
+	</label>
+	<g:select name="local" from="${events.Localidade.list()}" multiple="multiple" optionKey="id" size="5" value="${eventoInstance?.local*.id}" class="many-to-many"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: eventoInstance, field: 'publico', 'error')} ">
 	<label for="publico">
 		<g:message code="evento.publico.label" default="Publico" />
 		
 	</label>
 	<g:checkBox name="publico" value="${eventoInstance?.publico}" />
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: eventoInstance, field: 'tema', 'error')} ">
+	<label for="tema">
+		<g:message code="evento.tema.label" default="Tema" />
+		
+	</label>
+	<g:select name="tema" from="${events.Tema.list()}" multiple="multiple" optionKey="id" size="5" value="${eventoInstance?.tema*.id}" class="many-to-many"/>
 
 </div>
 

@@ -9,7 +9,7 @@ class Convite {
     }
 	
 	static hasOne = [evento:Evento]
-	static hasMany = [listausuario:ListaUsuario]
+	static hasMany = [listausuario:Usuario]
 	
 	String toString(){
 		descricao

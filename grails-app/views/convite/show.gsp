@@ -55,7 +55,7 @@
 					<span id="listausuario-label" class="property-label"><g:message code="convite.listausuario.label" default="Listausuario" /></span>
 					
 						<g:each in="${conviteInstance.listausuario}" var="l">
-						<span class="property-value" aria-labelledby="listausuario-label"><g:link controller="listaUsuario" action="show" id="${l.id}">${l?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="listausuario-label"><g:link controller="usuario" action="show" id="${l.id}">${l?.encodeAsHTML()}</g:link></span>
 						</g:each>
 					
 				</li>

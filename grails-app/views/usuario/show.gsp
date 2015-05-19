@@ -64,7 +64,7 @@
 					<span id="localidadeinteresse-label" class="property-label"><g:message code="usuario.localidadeinteresse.label" default="Localidadeinteresse" /></span>
 					
 						<g:each in="${usuarioInstance.localidadeinteresse}" var="l">
-						<span class="property-value" aria-labelledby="localidadeinteresse-label"><g:link controller="localidadeInteresse" action="show" id="${l.id}">${l?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="localidadeinteresse-label"><g:link controller="localidade" action="show" id="${l.id}">${l?.encodeAsHTML()}</g:link></span>
 						</g:each>
 					
 				</li>
@@ -84,7 +84,7 @@
 					<span id="temainteresse-label" class="property-label"><g:message code="usuario.temainteresse.label" default="Temainteresse" /></span>
 					
 						<g:each in="${usuarioInstance.temainteresse}" var="t">
-						<span class="property-value" aria-labelledby="temainteresse-label"><g:link controller="temaInteresse" action="show" id="${t.id}">${t?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="temainteresse-label"><g:link controller="tema" action="show" id="${t.id}">${t?.encodeAsHTML()}</g:link></span>
 						</g:each>
 					
 				</li>

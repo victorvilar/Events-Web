@@ -1,6 +1,13 @@
 package events
 
-class Usuario extends ListaUsuario {
+import java.util.Date;
+
+class Usuario {
+	
+	String nome
+	Date dataNascimento
+	String telefone
+	String email
 	
     static constraints = {
     	nome(nullable:false, blank:false)
@@ -8,7 +15,7 @@ class Usuario extends ListaUsuario {
 	}
 	
 	static belongsTo = [localidade:Localidade]
-	static hasMany = [localidadeinteresse:LocalidadeInteresse, temainteresse:TemaInteresse]
+	static hasMany = [localidadeinteresse:Localidade, temainteresse:Tema]
 	
 	String toString(){
 		nome

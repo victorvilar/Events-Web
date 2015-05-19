@@ -1,5 +1,5 @@
 package events
 
-class Localidade extends LocalidadeInteresse {
+class Localidade {
 	
 }

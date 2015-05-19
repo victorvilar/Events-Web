@@ -43,7 +43,7 @@
 		<g:message code="usuario.localidadeinteresse.label" default="Localidadeinteresse" />
 		
 	</label>
-	<g:select name="localidadeinteresse" from="${events.LocalidadeInteresse.list()}" multiple="multiple" optionKey="id" size="5" value="${usuarioInstance?.localidadeinteresse*.id}" class="many-to-many"/>
+	<g:select name="localidadeinteresse" from="${events.Localidade.list()}" multiple="multiple" optionKey="id" size="5" value="${usuarioInstance?.localidadeinteresse*.id}" class="many-to-many"/>
 
 </div>
 
@@ -61,7 +61,7 @@
 		<g:message code="usuario.temainteresse.label" default="Temainteresse" />
 		
 	</label>
-	<g:select name="temainteresse" from="${events.TemaInteresse.list()}" multiple="multiple" optionKey="id" size="5" value="${usuarioInstance?.temainteresse*.id}" class="many-to-many"/>
+	<g:select name="temainteresse" from="${events.Tema.list()}" multiple="multiple" optionKey="id" size="5" value="${usuarioInstance?.temainteresse*.id}" class="many-to-many"/>
 
 </div>
 

@@ -70,11 +70,33 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${eventoInstance?.local}">
+				<li class="fieldcontain">
+					<span id="local-label" class="property-label"><g:message code="evento.local.label" default="Local" /></span>
+					
+						<g:each in="${eventoInstance.local}" var="l">
+						<span class="property-value" aria-labelledby="local-label"><g:link controller="localidade" action="show" id="${l.id}">${l?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${eventoInstance?.publico}">
 				<li class="fieldcontain">
 					<span id="publico-label" class="property-label"><g:message code="evento.publico.label" default="Publico" /></span>
 					
 						<span class="property-value" aria-labelledby="publico-label"><g:formatBoolean boolean="${eventoInstance?.publico}" /></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${eventoInstance?.tema}">
+				<li class="fieldcontain">
+					<span id="tema-label" class="property-label"><g:message code="evento.tema.label" default="Tema" /></span>
+					
+						<g:each in="${eventoInstance.tema}" var="t">
+						<span class="property-value" aria-labelledby="tema-label"><g:link controller="tema" action="show" id="${t.id}">${t?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>

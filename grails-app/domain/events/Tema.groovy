@@ -1,6 +1,6 @@
 package events
 
-class Tema extends TemaInteresse {
+class Tema {
 	
 	String descricao
 	

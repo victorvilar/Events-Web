@@ -15,7 +15,7 @@ class Evento {
 	}
 	
 	static belongsTo = [usuario:Usuario]
-	static hasMany = [convite:Convite]
+	static hasMany = [convite:Convite, tema:Tema, local:Localidade]
 	
 	String toString(){
 		nome
