@@ -32,6 +32,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${bairroInstance?.cidade}">
+				<li class="fieldcontain">
+					<span id="cidade-label" class="property-label"><g:message code="bairro.cidade.label" default="Cidade" /></span>
+					
+						<span class="property-value" aria-labelledby="cidade-label"><g:link controller="cidade" action="show" id="${bairroInstance?.cidade?.id}">${bairroInstance?.cidade?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:bairroInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

@@ -11,4 +11,6 @@ class Bairro extends Localidade{
 	String toString(){
 		nome
 	}
+	
+	static belongsTo = [cidade:Cidade]
 }

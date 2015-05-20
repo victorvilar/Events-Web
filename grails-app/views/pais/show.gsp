@@ -32,6 +32,17 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${paisInstance?.estado}">
+				<li class="fieldcontain">
+					<span id="estado-label" class="property-label"><g:message code="pais.estado.label" default="Estado" /></span>
+					
+						<g:each in="${paisInstance.estado}" var="e">
+						<span class="property-value" aria-labelledby="estado-label"><g:link controller="estado" action="show" id="${e.id}">${e?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:paisInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

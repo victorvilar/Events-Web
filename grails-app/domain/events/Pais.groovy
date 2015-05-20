@@ -11,4 +11,6 @@ class Pais extends Localidade {
 	String toString(){
 		nome
 	}
+	
+	static hasMany = [estado:Estado]
 }

@@ -32,6 +32,26 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${cidadeInstance?.bairro}">
+				<li class="fieldcontain">
+					<span id="bairro-label" class="property-label"><g:message code="cidade.bairro.label" default="Bairro" /></span>
+					
+						<g:each in="${cidadeInstance.bairro}" var="b">
+						<span class="property-value" aria-labelledby="bairro-label"><g:link controller="bairro" action="show" id="${b.id}">${b?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${cidadeInstance?.estado}">
+				<li class="fieldcontain">
+					<span id="estado-label" class="property-label"><g:message code="cidade.estado.label" default="Estado" /></span>
+					
+						<span class="property-value" aria-labelledby="estado-label"><g:link controller="estado" action="show" id="${cidadeInstance?.estado?.id}">${cidadeInstance?.estado?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:cidadeInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

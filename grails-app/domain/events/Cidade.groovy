@@ -11,4 +11,7 @@ class Cidade extends Localidade {
 	String toString(){
 		nome
 	}
+	
+	static belongsTo = [estado:Estado]
+	static hasMany = [bairro:Bairro]
 }
