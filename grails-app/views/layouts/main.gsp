@@ -82,10 +82,18 @@
 		<div id="sidebar-left" class="col-xs-2 col-sm-2">
 			<ul class="nav main-menu">
 				
+				<!-- HOME -->
+				<li>
+					<a href="${request.contextPath}/" class="active">
+						<i class="fa fa-adjust"></i>
+						<span class="hidden-xs">Home</span>
+					</a>
+				</li>
+				
 				<!-- USUARIOS -->
 				<li>
 					<a href="${request.contextPath}/Usuario" class="active">
-						<i class="fa fa-adjust"></i>
+						<i class="fa fa-male"></i>
 						<span class="hidden-xs">Usuários</span>
 					</a>
 				</li>

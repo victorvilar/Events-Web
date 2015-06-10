@@ -5,6 +5,7 @@
 		<g:set var="entityName" value="${message(code: 'usuario.label', default: 'Usuario')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
+	
 	<body>
 	<div class="row">
 	<div class="col-xs-12 col-sm-12">
@@ -44,7 +45,7 @@
 					<g:render template="form"/>
 				</fieldset>
 				<fieldset class="buttons">
-					<g:submitButton name="Criar" class="btn btn-default btn-sm" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+					<g:submitButton name="Criar" class="btn btn-primary btn-sm" value="${message(code: 'default.button.create.label', default: 'Create')}" />
 				</fieldset>
 			</g:form> 
 			</div>
