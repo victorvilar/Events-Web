@@ -22,11 +22,13 @@
 		<![endif]-->
 	</head>
 <body>
+
 <!--Start Header-->
 <div id="screensaver">
 	<canvas id="canvas"></canvas>
 	<i class="fa fa-lock" id="screen_unlock"></i>
 </div>
+
 <div id="modalbox">
 	<div class="devoops-modal">
 		<div class="devoops-modal-header">
@@ -63,76 +65,6 @@
 						</div>
 					</div>
 					<div class="col-xs-4 col-sm-8 top-panel-right">
-						<ul class="nav navbar-nav pull-right panel-menu">
-							<li class="hidden-xs">
-								<a href="${request.contextPath}/Events" class="modal-link">
-									<i class="fa fa-bell"></i>
-									<span class="badge">7</span>
-								</a>
-							</li>
-							<li class="hidden-xs">
-								<a class="ajax-link" href="ajax/calendar.html">
-									<i class="fa fa-calendar"></i>
-									<span class="badge">7</span>
-								</a>
-							</li>
-							<li class="hidden-xs">
-								<a href="ajax/page_messages.html" class="ajax-link">
-									<i class="fa fa-envelope"></i>
-									<span class="badge">7</span>
-								</a>
-							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle account" data-toggle="dropdown">
-									<div class="avatar">
-										<img src="img/avatar.jpg" class="img-rounded" alt="avatar" />
-									</div>
-									<i class="fa fa-angle-down pull-right"></i>
-									<div class="user-mini pull-right">
-										<span class="welcome">Welcome,</span>
-										<span>Jane Devoops</span>
-									</div>
-								</a>
-								<ul class="dropdown-menu">
-									<li>
-										<a href="#">
-											<i class="fa fa-user"></i>
-											<span>Profile</span>
-										</a>
-									</li>
-									<li>
-										<a href="${request.contextPath}/ajax/page_messages.html" class="ajax-link">
-											<i class="fa fa-envelope"></i>
-											<span>Messages</span>
-										</a>
-									</li>
-									<li>
-										<a href="${request.contextPath}/ajax/gallery_simple.html" class="ajax-link">
-											<i class="fa fa-picture-o"></i>
-											<span>Albums</span>
-										</a>
-									</li>
-									<li>
-										<a href="${request.contextPath}/ajax/calendar.html" class="ajax-link">
-											<i class="fa fa-tasks"></i>
-											<span>Tasks</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<i class="fa fa-cog"></i>
-											<span>Settings</span>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<i class="fa fa-power-off"></i>
-											<span>Logout</span>
-										</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
 					</div>
 				</div>
 			</div>
@@ -140,27 +72,36 @@
 	</div>
 </header>
 <!--End Header-->
+
 <!--Start Container-->
+
+<!-- MAIN MENU -->
+
 <div id="main" class="container-fluid">
 	<div class="row">
 		<div id="sidebar-left" class="col-xs-2 col-sm-2">
 			<ul class="nav main-menu">
+				
+				<!-- USUARIOS -->
 				<li>
 					<a href="${request.contextPath}/Usuario" class="active">
-						<i class="fa fa-dashboard"></i>
+						<i class="fa fa-adjust"></i>
 						<span class="hidden-xs">Usuários</span>
 					</a>
 				</li>
 				
-				<li class="dropdown">
-					<a href="${request.contextPath}/Evento" class="dropdown-toggle">
-						<i class="fa fa-table"></i>
+				<!-- EVENTOS -->
+				<li>
+					<a href="${request.contextPath}/Evento" class="active">
+						<i class="fa fa-adjust"></i>
 						 <span class="hidden-xs">Eventos</span>
 					</a>
 				</li>
+
+				<!-- LOCALIDADES -->
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-pencil-square-o"></i>
+						<i class="fa fa-adjust"></i>
 						 <span class="hidden-xs">Localidades</span>
 					</a>
 					<ul class="dropdown-menu">
@@ -170,9 +111,19 @@
 						<li><a class="active" href="${request.contextPath}/Bairro">Bairro</a></li>
 					</ul>
 				</li>
-				<li class="dropdown">
-					<a href="${request.contextPath}/Tema" class="dropdown-toggle">
-						<i class="fa fa-desktop"></i>
+				
+				<!-- TEMAS -->
+				<li>
+					<a href="${request.contextPath}/Tema" class="active">
+						<i class="fa fa-adjust"></i>
+						 <span class="hidden-xs">Temas</span>
+					</a>
+				</li>
+				
+				<!-- CONVITES -->
+				<li>
+					<a href="${request.contextPath}/Convite" class="active">
+						<i class="fa fa-adjust"></i>
 						 <span class="hidden-xs">Temas</span>
 					</a>
 				</li>
@@ -195,99 +146,8 @@
 						<li><a href="${request.contextPath}/ajax/page_500.html">Error 500</a></li>
 					</ul>
 				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-map-marker"></i>
-						<span class="hidden-xs">Maps</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="${request.contextPath}/ajax/maps.html">OpenStreetMap</a></li>
-						<li><a class="ajax-link" href="${request.contextPath}/ajax/map_fullscreen.html">Fullscreen map</a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-picture-o"></i>
-						 <span class="hidden-xs">Gallery</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="${request.contextPath}/ajax/gallery_simple.html">Simple Gallery</a></li>
-						<li><a class="ajax-link" href="${request.contextPath}/ajax/gallery_flickr.html">Flickr Gallery</a></li>
-					</ul>
-				</li>
-				<li>
-					 <a class="ajax-link" href="${request.contextPath}/ajax/typography.html">
-						 <i class="fa fa-font"></i>
-						 <span class="hidden-xs">Typography</span>
-					</a>
-				</li>
-				 <li>
-					<a class="ajax-link" href="ajax/calendar.html">
-						 <i class="fa fa-calendar"></i>
-						 <span class="hidden-xs">Calendar</span>
-					</a>
-				 </li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-picture-o"></i>
-						 <span class="hidden-xs">Multilevel menu</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#">First level menu</a></li>
-						<li><a href="#">First level menu</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle">
-								<i class="fa fa-plus-square"></i>
-								<span class="hidden-xs">Second level menu group</span>
-							</a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Second level menu</a></li>
-								<li><a href="#">Second level menu</a></li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle">
-										<i class="fa fa-plus-square"></i>
-										<span class="hidden-xs">Three level menu group</span>
-									</a>
-									<ul class="dropdown-menu">
-										<li><a href="#">Three level menu</a></li>
-										<li><a href="#">Three level menu</a></li>
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle">
-												<i class="fa fa-plus-square"></i>
-												<span class="hidden-xs">Four level menu group</span>
-											</a>
-											<ul class="dropdown-menu">
-												<li><a href="#">Four level menu</a></li>
-												<li><a href="#">Four level menu</a></li>
-												<li class="dropdown">
-													<a href="#" class="dropdown-toggle">
-														<i class="fa fa-plus-square"></i>
-														<span class="hidden-xs">Five level menu group</span>
-													</a>
-													<ul class="dropdown-menu">
-														<li><a href="#">Five level menu</a></li>
-														<li><a href="#">Five level menu</a></li>
-														<li class="dropdown">
-															<a href="#" class="dropdown-toggle">
-																<i class="fa fa-plus-square"></i>
-																<span class="hidden-xs">Six level menu group</span>
-															</a>
-															<ul class="dropdown-menu">
-																<li><a href="#">Six level menu</a></li>
-																<li><a href="#">Six level menu</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-										<li><a href="#">Three level menu</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</li>
+		
+				
 			</ul>
 		</div>
 		<!--Start Content-->
