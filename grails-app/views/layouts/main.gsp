@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		
 		<title>Events</title>
 		<meta name="description" content="description">
 		<meta name="author" content="Vilar e Cephas">
@@ -24,6 +25,7 @@
 <body>
 
 <!--Start Header-->
+
 <div id="screensaver">
 	<canvas id="canvas"></canvas>
 	<i class="fa fa-lock" id="screen_unlock"></i>
@@ -51,7 +53,8 @@
 	<div class="container-fluid expanded-panel">
 		<div class="row">
 			<div id="logo" class="col-xs-12 col-sm-2">
-				<a href="/Events">Events</a>
+				
+				<a href="${request.contextPath}/">Events</a>
 			</div>
 			<div id="top-panel" class="col-xs-12 col-sm-10">
 				<div class="row">
@@ -84,8 +87,8 @@
 				
 				<!-- HOME -->
 				<li>
-					<a href="${request.contextPath}/" class="active">
-						<i class="fa fa-adjust"></i>
+					<a href="${request.contextPath}/admin" class="active">
+						<i class="fa fa-home"></i>
 						<span class="hidden-xs">Home</span>
 					</a>
 				</li>
@@ -101,58 +104,59 @@
 				<!-- EVENTOS -->
 				<li>
 					<a href="${request.contextPath}/Evento" class="active">
-						<i class="fa fa-adjust"></i>
+						<i class="fa fa-calendar"></i>
 						 <span class="hidden-xs">Eventos</span>
+					</a>
+				</li>
+
+				<!-- CONVITES -->
+				<li>
+					<a href="${request.contextPath}/Convite" class="active">
+						<i class="fa fa-file-text-o"></i>
+						 <span class="hidden-xs">Convites</span>
 					</a>
 				</li>
 
 				<!-- LOCALIDADES -->
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-adjust"></i>
-						 <span class="hidden-xs">Localidades</span>
+						<i class="fa fa-globe"></i>
+						<span class="hidden-xs">Localidades</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="active" href="${request.contextPath}/Pais">Pais</a></li>
-						<li><a class="active" href="${request.contextPath}/Estado">Estado</a></li>
-						<li><a class="active" href="${request.contextPath}/Cidade">Cidade</a></li>
-						<li><a class="active" href="${request.contextPath}/Bairro">Bairro</a></li>
+						<li>
+							<a class="active" href="${request.contextPath}/Pais">
+								<i class="fa fa-map-marker"></i>
+								<spam class="hidden-xs"> Pais</spam>
+							</a>
+						</li>
+						<li>
+							<a class="active" href="${request.contextPath}/Estado">
+								<i class="fa fa-map-marker"></i>
+								<spam class="hidden-xs"> Estado</spam>
+							</a>
+						</li>
+						<li>
+							<a class="active" href="${request.contextPath}/Cidade">
+								<i class="fa fa-map-marker"></i>
+								<spam class="hidden-xs"> Cidade</spam>
+							</a>
+						</li>
+						<li>
+							<a class="active" href="${request.contextPath}/Bairro">
+								<i class="fa fa-map-marker"></i>
+								<spam class="hidden-xs"> Bairro</spam>
+							</a>
+						</li>
 					</ul>
 				</li>
 				
 				<!-- TEMAS -->
 				<li>
 					<a href="${request.contextPath}/Tema" class="active">
-						<i class="fa fa-adjust"></i>
+						<i class="fa fa-book"></i>
 						 <span class="hidden-xs">Temas</span>
 					</a>
-				</li>
-				
-				<!-- CONVITES -->
-				<li>
-					<a href="${request.contextPath}/Convite" class="active">
-						<i class="fa fa-adjust"></i>
-						 <span class="hidden-xs">Temas</span>
-					</a>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-list"></i>
-						 <span class="hidden-xs">Pages</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="ajax/page_login.html">Login</a></li>
-						<li><a href="ajax/page_register.html">Register</a></li>
-						<li><a id="locked-screen" class="submenu" href="ajax/page_locked.html">Locked Screen</a></li>
-						<li><a class="ajax-link" href="ajax/page_contacts.html">Contacts</a></li>
-						<li><a class="ajax-link" href="ajax/page_feed.html">Feed</a></li>
-						<li><a class="ajax-link add-full" href="ajax/page_messages.html">Messages</a></li>
-						<li><a class="ajax-link" href="ajax/page_pricing.html">Pricing</a></li>
-						<li><a class="ajax-link" href="ajax/page_invoice.html">Invoice</a></li>
-						<li><a class="ajax-link" href="ajax/page_search.html">Search Results</a></li>
-						<li><a class="ajax-link" href="ajax/page_404.html">Error 404</a></li>
-						<li><a href="${request.contextPath}/ajax/page_500.html">Error 500</a></li>
-					</ul>
 				</li>
 		
 				

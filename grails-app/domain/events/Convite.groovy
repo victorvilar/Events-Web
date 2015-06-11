@@ -8,7 +8,7 @@ class Convite {
     static constraints = {
     }
 	
-	static hasOne = [evento:Evento]
+	static belongsTo = [evento:Evento]
 	static hasMany = [listausuario:Usuario]
 	
 	String toString(){

@@ -46,6 +46,7 @@
 				</fieldset>
 				<fieldset class="buttons">
 					<g:submitButton name="Criar" class="btn btn-primary btn-sm" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+					<g:link class="btn btn-success btn-sm" action="index"><g:message code="Voltar" args="[entityName]" /></g:link>
 				</fieldset>
 			</g:form> 
 			</div>
