@@ -74,7 +74,7 @@
 			<h4>O MELHOR GERENCIADOR DE CONVITES DO MUNDO</h4>
 		</div>
 		<div class="page-scroll">
-			<a href="#service" class="btn btn-circle">
+			<a href="#about" class="btn btn-circle">
 				<i class="fa fa-angle-double-down animated"></i>
 			</a>
 		</div>
